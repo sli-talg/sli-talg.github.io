@@ -1,5 +1,4 @@
 <?php 
-header("Content-Type: text/html; charset=ISO-8859-1");
 /*
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -15,7 +14,7 @@ foreach ($_REQUEST as $key => $val) {
 	fclose ($fd);
 	$array_de_entradas = get_tag_contents($xml,"entrada");
 
-echo '<html><head><TITLE>English-Portuguese CLUVI Dictionary</TITLE><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"><meta http-equiv="Content-Language" content="gl"></head>
+echo '<html><head><TITLE>English-Portuguese CLUVI Dictionary</TITLE><meta charset="UTF-8" /></head>
 
 
 <TABLE BORDER=0 ALIGN=right>
@@ -120,7 +119,7 @@ echo "</blockquote></blockquote></center>";
 			$pp16 = preg_replace("/<\/plurilex>/", "</b>", $pp15);
 
 			$pp17 = preg_replace("/\|/", "<i>", $pp16);
-			$pp18 = preg_replace ("/\¬/", "</i>", $pp17);
+			$pp18 = preg_replace ("/\Â¬/", "</i>", $pp17);
 
 
 			$pp19 = preg_replace ("/\[\[br\]\]/", "<br />", $pp18);
@@ -211,7 +210,7 @@ echo "</blockquote></blockquote></center>";
 			$pp16 = preg_replace("/<\/plurilex>/", "</b>", $pp15);
 
 			$pp17 = preg_replace("/\|/", "<i>", $pp16);
-			$pp18 = preg_replace ("/\¬/", "</i>", $pp17);
+			$pp18 = preg_replace ("/\Â¬/", "</i>", $pp17);
 
 
 			echo $pp18;

@@ -1,5 +1,4 @@
 <?php 
-header("Content-Type: text/html; charset=ISO-8859-1");
 /*
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -15,7 +14,7 @@ foreach ($_REQUEST as $key => $val) {
 	fclose ($fd);
 	$array_de_entradas = get_tag_contents($xml,"entrada");
 
-echo '<html><head><TITLE>Dicionario CLUVI inglés-portugués</TITLE><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"><meta http-equiv="Content-Language" content="gl"></head>
+echo '<html><head><TITLE>Dicionario CLUVI inglÃ©s-portuguÃ©s</TITLE><meta charset="UTF-8" /></head>
 
 
 <TABLE BORDER=0 ALIGN=right>
@@ -23,16 +22,16 @@ echo '<html><head><TITLE>Dicionario CLUVI inglés-portugués</TITLE><meta http-equ
     <TD><A HREF="../index.html"><IMG SRC="sli.jpg" BORDER=0 WIDTH=68 HEIGHT=49 ALT="logo sli" ALIGN=right></a></TD>
   </TR>
   <TR>
-    <TD><small>Seminario de Lingüística Informática, 2008<br><DIV ALIGN=right>Universidade de Vigo</DIV></small></TD>
+    <TD><small>Seminario de LingÃ¼Ã­stica InformÃ¡tica, 2008<br><DIV ALIGN=right>Universidade de Vigo</DIV></small></TD>
   </TR>
 </TABLE>
-<H2>Dicionario CLUVI inglés-portugués</H2><H3>(Baseado no Corpus CLUVI da Universidade de Vigo)</H3><br><hr>
+<H2>Dicionario CLUVI inglÃ©s-portuguÃ©s</H2><H3>(Baseado no Corpus CLUVI da Universidade de Vigo)</H3><br><hr>
 
 <TABLE CELLPADDING=10 BORDER=1 FRAME=BOX ALIGN=CENTER>
   <TR>
-    <TD><A HREF="index.html">Páxina inicial </A></TD>    
+    <TD><A HREF="index.html">PÃ¡xina inicial </A></TD>    
     <TD><A HREF="clip.html">Consultar dicionario</A></TD>
-    <TD><A HREF="info.html">Máis información</A></TD>
+    <TD><A HREF="info.html">MÃ¡is informaciÃ³n</A></TD>
     <TD><A HREF="clip_en.html">In English</A></TD>
   </TR>
 </TABLE>
@@ -120,7 +119,7 @@ echo "</blockquote></blockquote></center>";
 			$pp16 = preg_replace("/<\/plurilex>/", "</b>", $pp15);
 
 			$pp17 = preg_replace("/\|/", "<i>", $pp16);
-			$pp18 = preg_replace ("/\¬/", "</i>", $pp17);
+			$pp18 = preg_replace ("/\Â¬/", "</i>", $pp17);
 
 
 			$pp19 = preg_replace ("/\[\[br\]\]/", "<br />", $pp18);
@@ -211,7 +210,7 @@ echo "</blockquote></blockquote></center>";
 			$pp16 = preg_replace("/<\/plurilex>/", "</b>", $pp15);
 
 			$pp17 = preg_replace("/\|/", "<i>", $pp16);
-			$pp18 = preg_replace ("/\¬/", "</i>", $pp17);
+			$pp18 = preg_replace ("/\Â¬/", "</i>", $pp17);
 
 
 			echo $pp18;
@@ -230,10 +229,10 @@ echo "</blockquote></blockquote></center>";
 
 	if ($num_lema < 1) {
 
-		echo "<br><blockquote>Sentímolo, mais neste caso <b>non se obtivo ningún resultado</b> da súa pescuda no dicionario. Se desexa realizar outra pescuda no Dicionario CLUVI inglés-portugués, pode calcar <A HREF=\"index.html\">aquí</A>.<br><BR><B>Exemplos de buscas</B>:
+		echo "<br><blockquote>SentÃ­molo, mais neste caso <b>non se obtivo ningÃºn resultado</b> da sÃºa pescuda no dicionario. Se desexa realizar outra pescuda no Dicionario CLUVI inglÃ©s-portuguÃ©s, pode calcar <A HREF=\"index.html\">aquÃ­</A>.<br><BR><B>Exemplos de buscas</B>:
 <A HREF=\"clip.php?en=afraid\">afraid</A>, <A HREF=\"clip.php?en=black\">black</A>, <A HREF=\"clip.php?en=cold\">cold</A>, <A HREF=\"clip.php?en=look\">look</A>, <A HREF=\"clip.php?en=make\">make</A>, <A HREF=\"clip.php?en=grim\">grim</A><BR><BR>
 
-Versión 0.5 (2008): 1347 entradas, 3031 traducións</blockquote>
+VersiÃ³n 0.5 (2008): 1347 entradas, 3031 traduciÃ³ns</blockquote>
 ";
 
 	}	
